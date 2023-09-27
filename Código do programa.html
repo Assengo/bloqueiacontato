@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de números</title>
+</head>
+<body>
+<p>BEGIN:VCARD<br>
+  VERSION:3.0<br>
+  FN:Nome Sobrenome<br>
+  N:Sobrenome;Nome;;;</p>
+</body>
+<script>
+  function lista(){
+    for (i =0; i <= 9999; i++) {
+     var resultado = i
+     var resultadoum = resultado+1
+     var quatrodigitos = ("0000"+resultado).slice(-4);
+     document.write("item"+resultadoum+".TEL:031 4052-"+quatrodigitos+"<br>");
+     document.write("item"+resultadoum+".X-ABLabel:"+"<br>")
+      if (resultado === 9999) {
+        break;
+      }
+    }
+  }
+  lista()
+    </script>
+    <p>CATEGORIES:myContacts<br>
+      END:VCARD
+      </p>
+</html>
